@@ -1,0 +1,124 @@
+<html>
+<head>
+    <style>
+        .sidebar {
+            height: 100%;
+            width: 230px;
+            position: fixed; 
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #f1f1f1;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+        .sidebar a:hover {
+            color: #020000;
+        }
+        .sidebar summary {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+        .sidebar summary:hover {
+            color: #020000;
+        }
+        .main {
+            margin-left: 230px;
+            padding: 0px 10px;
+        }
+        .main summary:hover {
+            color: #000000;
+        }
+        .main h1 {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #252525;
+            display: block;
+        }
+        .main summary {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #5f5d5d;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <details>
+            <summary> <span id="arrow1">▶</span> Click to navigate</summary>
+            <a href="#placeholder1">placeholder1</a><br>
+            <a href="#placeholder2">placeholder2</a><br>
+            <a href="#placeholder3">placeholder3</a><br>
+            <a href="#placeholder4">placeholder4</a><br>
+            <a href="#placeholder5">placeholder5</a><br>
+        </details>
+    </div>
+
+    <div class="main">
+        <details>
+            <summary><p id="placeholder1"> <span id="arrow2">▶</span>placeholder1</p></summary>
+            this is placeholder1.
+        </details>
+<br><br><br><br><br>
+<br><br><br><br><br>
+        <details>
+            <summary> <p id="placeholder2"><span id="arrow3">▶</span>placeholder2</p></summary>
+            this is placeholder2.
+        </details>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <details>
+            <summary><p id="placeholder3"> <span id="arrow4">▶</span>placeholder3</p></summary>
+            this is placeholder3.
+        </details>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <details>
+            <summary><p id="placeholder4"> <span id="arrow5">▶</span>placeholder4</p></summary>
+            this is placeholder4.
+        </details>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <details>
+            <summary><p id="placeholder5"> <span id="arrow6">▶</span>placeholder5</p></summary>
+            this is placeholder5.
+        </details>
+        <br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+    </div>
+
+    <script>
+        const summaries = document.querySelectorAll('summary');
+
+        summaries.forEach((summary, index) => {
+            const arrow = summary.querySelector('span');
+
+            summary.addEventListener('click', function() {
+                if (arrow.textContent === '▶') {
+                    arrow.textContent = '▼';
+                } else {
+                    arrow.textContent = '▶';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
