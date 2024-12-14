@@ -193,7 +193,7 @@
                 <div class="chart-block">
                     <h2>Bar Chart</h2>
                     {{ graph|safe }}
-                </div><br>
+                </div><br><br>
             <div class="code-block">
                 <pre><code>
 &lt;div class="chart-block"&gt;
@@ -216,7 +216,7 @@ def create_graph():
     graph = pyo.plot(fig, output_type='div')
     return graph
                 </code></pre>
-                            </div>
+                            </div><br><br>
                 <div class="form-block">
                     <h2>Contact Form</h2>
                     <form method="POST">
@@ -230,10 +230,42 @@ def create_graph():
                     <p>Name: {{ name }}</p>
                     <p>Email: {{ email }}</p>
                     {% endif %}
-                </div><br>
+                </div><br><br>
 
 
-                
+                            <div class="code-block">
+                <pre><code>
+ &lt;div class="form-block"&gt;
+                    &lt;h2&gt;Contact Form&lt;/h2&gt;
+                    &lt;form method="POST"&gt;
+                        &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+                        &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+                        &lt;input type="submit" value="Submit"&gt;
+                    &lt;/form&gt;
+                    &lcub;% if name and email %&rcub;
+                    &lt;p&gt;Name: &lcub;&lcub; name &rcub;&rcub;&lt;/p&gt;
+                    &lt;p&gt;Email: &lcub;&lcub; email &rcub;&rcub;&lt;/p&gt;
+                    &lcub;% endif %&rcub;
+                &lt;/div&gt;
+
+
+
+def create_graph():
+    data = [go.Bar(
+        x=['Category A', 'Category B', 'Category C'],
+        y=[10, 20, 15]
+    )]
+    layout = go.Layout(
+        title='Sample Bar Chart',
+        height=500  # Set a specific height for the chart
+    )
+    fig = go.Figure(data=data, layout=layout)
+    graph = pyo.plot(fig, output_type='div')
+    return graph
+                </code></pre>
+                            </div><br><br>
                 <div class="chat-block">
                     <h2>Real-time Chat</h2>
                     <ul id="messages"></ul>
