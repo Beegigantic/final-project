@@ -31,11 +31,25 @@ def index():
     
     return render_template('index.html', graph=graph)
 
-@socketio.on('message')
-def handleMessage(msg):
-    print(f"Message: {msg}")
-    send(msg, broadcast=True)
+messages = []
 
+@socketio.on('connect')
+def handle_connect():
+    # Send existing messages to the newly connected client
+    for msg in messages:
+        send(msg)
+
+@socketio.on('message')
+def handle_message(msg):
+    print(f"Message: {msg}")
+    # Add the new message to the global list
+    messages.append(msg)
+    # Keep only the last 10 messages
+    if len(messages) > 10:
+        messages.pop(0)
+    # Broadcast the message to all clients
+    send(msg, broadcast=True)
+    
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Ensure the PORT environment variable is used
     socketio.run(app, host='0.0.0.0', port=port, debug=True, allow_unsafe_werkzeug=True)
