@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, send
-import plotly.graph_objs as go
+import plotly.graph_objs as go  # Ensure this import is correct
 import plotly.offline as pyo
 import os
 
@@ -33,8 +33,9 @@ def index():
 
 @socketio.on('message')
 def handleMessage(msg):
+    print(f"Message: {msg}")
     send(msg, broadcast=True)
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 5000))  # Ensure the PORT environment variable is used
     socketio.run(app, host='0.0.0.0', port=port, debug=True, allow_unsafe_werkzeug=True)
