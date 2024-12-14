@@ -31,10 +31,9 @@ def index():
     
     return render_template('index.html', graph=graph)
 
-@app.route('/html', methods=['GET', 'POST'])
+@app.route('/html')
 def html():
-     render_template('html.html')
-
+    return render_template('html.html')
 
 messages = []
 
