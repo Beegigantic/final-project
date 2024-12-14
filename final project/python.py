@@ -31,7 +31,13 @@ def index():
     
     return render_template('index.html', graph=graph)
 
+@app.route('/html', methods=['GET', 'POST'])
+def html():
+     render_template('html.html')
+
+
 messages = []
+
 
 @socketio.on('connect')
 def handle_connect():
