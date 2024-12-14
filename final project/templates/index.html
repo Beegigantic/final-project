@@ -198,7 +198,7 @@
                 <pre><code>
 &lt;div class="chart-block"&gt;
 &lt;h2&gt;Bar Chart&lt;/h2&gt;
-{{ graph|safe }}
+&lcub;&lcub; graph|safe &rcub;&rcub;
 &lt;/div&gt;
 
 
@@ -216,7 +216,7 @@ def create_graph():
     graph = pyo.plot(fig, output_type='div')
     return graph
                 </code></pre>
-            </div>
+                            </div>
                 <div class="form-block">
                     <h2>Contact Form</h2>
                     <form method="POST">
