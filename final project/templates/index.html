@@ -77,6 +77,17 @@
         .form-block, .chat-block {
             max-width: 400px;
         }
+        .chat-block {
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
         ul {
             list-style-type: none;
             padding: 0;
@@ -266,13 +277,14 @@ def create_graph():
     return graph
                 </code></pre>
                             </div><br><br>
-                <div class="chat-block">
-                    <h2>Real-time Chat</h2>
-                    <ul id="messages"></ul>
-                    <form id="form" action="">
-                        <input id="message" autocomplete="off"><button>Send</button>
-                    </form>
-                </div>
+            <div class="chat-block">
+    <h2>Real-time Chat</h2>
+    <ul id="messages"></ul>  
+    <form id="form" action="">
+        <input id="message" autocomplete="off"><button>Send</button>
+    </form>
+</div>
+
             </div>
         </details>
         <br><br><br><br><br>
