@@ -192,9 +192,31 @@
             <div class="container">
                 <div class="chart-block">
                     <h2>Bar Chart</h2>
-                    <!-- Placeholder for the dynamic chart -->
                     {{ graph|safe }}
-                </div>
+                </div><br>
+            <div class="code-block">
+                <pre><code>
+&lt;div class="chart-block"&gt;
+&lt;h2&gt;Bar Chart&lt;/h2&gt;
+{{ graph|safe }}
+&lt;/div&gt;
+
+
+
+def create_graph():
+    data = [go.Bar(
+        x=['Category A', 'Category B', 'Category C'],
+        y=[10, 20, 15]
+    )]
+    layout = go.Layout(
+        title='Sample Bar Chart',
+        height=500  # Set a specific height for the chart
+    )
+    fig = go.Figure(data=data, layout=layout)
+    graph = pyo.plot(fig, output_type='div')
+    return graph
+                </code></pre>
+            </div>
                 <div class="form-block">
                     <h2>Contact Form</h2>
                     <form method="POST">
@@ -208,7 +230,10 @@
                     <p>Name: {{ name }}</p>
                     <p>Email: {{ email }}</p>
                     {% endif %}
-                </div>
+                </div><br>
+
+
+                
                 <div class="chat-block">
                     <h2>Real-time Chat</h2>
                     <ul id="messages"></ul>
