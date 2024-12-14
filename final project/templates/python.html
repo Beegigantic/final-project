@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
     <style>
         .sidebar {
             height: 100%;
             width: 230px;
-            position: fixed; 
+            position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
@@ -53,72 +54,210 @@
             color: #5f5d5d;
             display: block;
         }
+        .code-block {
+            color: #44e23e;
+            background-color: #3b3b3b;
+            border: 2px solid #000000;
+            padding: 5px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .form-block, .chat-block, .chart-block {
+            width: 45%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        .form-block, .chat-block {
+            max-width: 400px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <details>
-            <summary> <span id="arrow1">▶</span> Click to navigate</summary>
-            <a href="#placeholder1">placeholder1</a><br>
-            <a href="#placeholder2">placeholder2</a><br>
-            <a href="#placeholder3">placeholder3</a><br>
-            <a href="#placeholder4">placeholder4</a><br>
-            <a href="#placeholder5">placeholder5</a><br>
+            <summary><span id="arrow1">▶</span> Click to navigate</summary>
+            <a href="#javascript">Javascript</a><br>
+            <a href="#c++">C++</a><br>
+            <a href="#c#">C#</a><br>
+            <a href="#html">Html</a><br>
+            <a href="#python">Python</a><br>
         </details>
     </div>
 
     <div class="main">
         <details>
-            <summary><p id="placeholder1"> <span id="arrow2">▶</span>placeholder1</p></summary>
-            this is placeholder1.
+            <summary><p id="javascript"><span id="arrow2">▶</span>Javascript</p></summary>
+            this is Javascript.
         </details>
-<br><br><br><br><br>
-<br><br><br><br><br>
-        <details>
-            <summary> <p id="placeholder2"><span id="arrow3">▶</span>placeholder2</p></summary>
-            this is placeholder2.
-        </details>
-        <br><br><br><br><br>
         <br><br><br><br><br>
         <details>
-            <summary><p id="placeholder3"> <span id="arrow4">▶</span>placeholder3</p></summary>
-            this is placeholder3.
+            <summary><p id="c++"><span id="arrow3">▶</span>C++</p></summary>
+            this is C++.
         </details>
-        <br><br><br><br><br>
         <br><br><br><br><br>
         <details>
-            <summary><p id="placeholder4"> <span id="arrow5">▶</span>placeholder4</p></summary>
-            this is placeholder4.
+            <summary><p id="c#"><span id="arrow4">▶</span>C#</p></summary>
+            this is C#.
         </details>
-        <br><br><br><br><br>
         <br><br><br><br><br>
         <details>
-            <summary><p id="placeholder5"> <span id="arrow6">▶</span>placeholder5</p></summary>
-            this is placeholder5.
-        </details>
-        <br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
+            <summary><p id="html"><span id="arrow5">▶</span>Html</p></summary>
+            HTML is a type of coding language that is primarily used for making websites.<br>
+            This website is made 60% by HTML and is the base for most websites.<br>
+            Some examples of HTML are... <br>
+            <h2>Tables</h2><br>
+            <table border="1">
+                <tr><td>A</td><td>B</td></tr>
+                <tr><td>C</td><td>D</td></tr>
+            </table>
+            and the code looks like this.
+            <div class="code-block">
+                <pre><code>
+&lt;table border="1"&gt;<br>
+&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;td&gt;C&lt;/td&gt;&lt;td&gt;D&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;/table&gt;
+                </code></pre>
+            </div>
+            <h2>Lists</h2><br>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <ol>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+            and this code looks like.
+            <div class="code-block">
+                <pre><code>
+&lt;ul&gt;<br>
+&lt;li&gt;1&lt;/li&gt;<br>
+&lt;li&gt;2&lt;/li&gt;<br>
+&lt;li&gt;3&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;ol&gt;<br>
+&lt;li&gt;4&lt;/li&gt;<br>
+&lt;li&gt;5&lt;/li&gt;<br>
+&lt;li&gt;6&lt;/li&gt;<br>
+&lt;/ol&gt;<br>
+                </code></pre>
+            </div>
+          <h2>Images</h2><br>
+<img width="300" src="">
+<img width="300" src="">
+<br>this code looks like.
+<div class="code-block">
+    <pre><code>
+&lt;img width="300" src="https://th.bing.com/th?q=HTML+Icon.png&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-CA&cc=CA&setlang=en&adlt=strict&t=1&mw=247"&gt;
+    </code></pre>
+</div>
+<h2>Videos</h2><br>
+<iframe width="300" src="https://www.youtube.com/embed/FQdaUv95mR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="300" src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br> this code looks like.
+<div class="code-block">
+    <pre><code>
+&lt;iframe width="300" src="https://www.youtube.com/embed/FQdaUv95mR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="300" src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+    </code></pre>
+</div>
+<h2>Links</h2><br>
+<a href="https://en.wikipedia.org/wiki/HTML">HTML Wikipedia</a><br><br><br>
+<br> this code looks like.
+<div class="code-block">
+    <pre><code>
+&lt;a href="https://en.wikipedia.org/wiki/HTML"&gt;HTML Wikipedia&lt;/a&gt;
+    </code></pre>
+</div>
+<br><br><br>
+<h5>If you want to learn more about HTML go here <a href="html.html">Html Page</a></h5>
+
+<details>
+    <summary><p id="python"><span id="arrow6">▶</span>Python</p></summary>
+    <div class="container">
+        <div class="chart-block">
+            <h2>Bar Chart</h2>
+            <!-- Placeholder for the dynamic chart -->
+            {{ graph|safe }}
+        </div>
+        <div class="form-block">
+            <h2>Contact Form</h2>
+            <form method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <input type="submit" value="Submit">
+            </form>
+            {% if name and email %}
+            <p>Name: {{ name }}</p>
+            <p>Email: {{ email }}</p>
+            {% endif %}
+        </div>
+        <div class="chat-block">
+            <h2>Real-time Chat</h2>
+            <ul id="messages"></ul>
+            <form id="form" action="">
+                <input id="message" autocomplete="off"><button>Send</button>
+            </form>
+        </div>
     </div>
-
-    <script>
-        const summaries = document.querySelectorAll('summary');
-
-        summaries.forEach((summary, index) => {
-            const arrow = summary.querySelector('span');
-
-            summary.addEventListener('click', function() {
-                if (arrow.textContent === '▶') {
-                    arrow.textContent = '▼';
-                } else {
-                    arrow.textContent = '▶';
-                }
-            });
+</details>
+<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+</div>
+<script>
+    const summaries = document.querySelectorAll('summary');
+    summaries.forEach((summary, index) => {
+        const arrow = summary.querySelector('span');
+        summary.addEventListener('click', function() {
+            if (arrow.textContent === '▶') {
+                arrow.textContent = '▼';
+            } else {
+                arrow.textContent = '▶';
+            }
         });
-    </script>
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        var form = document.getElementById('form');
+        var input = document.getElementById('message');
+        var messages = document.getElementById('messages');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            socket.send(input.value);
+            input.value = '';
+        });
+
+        socket.on('message', function(msg) {
+            var item = document.createElement('li');
+            item.textContent = msg;
+            messages.appendChild(item);
+        });
+    });
+</script>
 </body>
 </html>
