@@ -35,6 +35,21 @@ def index():
 def html_page():
     return render_template('html.html')
 
+@app.route('/python.html')
+def python_page():
+    return render_template('python.html')
+
+@app.route('/c#.html')
+def c#_page():
+    return render_template('c#.html')
+
+@app.route('/c++.html')
+def c++_page():
+    return render_template('c++.html')
+
+@app.route('/javascript.html')
+def javascript_page():
+    return render_template('javascript.html')
 messages = []
 
 
