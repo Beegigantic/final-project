@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -78,6 +77,18 @@
         .form-block, .chat-block {
             max-width: 400px;
         }
+        .chat-block {
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    max-height: 300px;
+    height: 400px;
+    overflow-y: auto;
+}
+
         ul {
             list-style-type: none;
             padding: 0;
@@ -87,177 +98,154 @@
 <body>
     <div class="sidebar">
         <details>
-            <summary><span id="arrow1">▶</span> Click to navigate</summary>
-            <a href="#javascript">Javascript</a><br>
-            <a href="#c++">C++</a><br>
-            <a href="#c#">C#</a><br>
-            <a href="#html">Html</a><br>
-            <a href="#python">Python</a><br>
+            <summary> <span id="arrow1">▶</span> Click to navigate</summary>
+            <a href="#placeholder1">History of Python</a><br>
+            <a href="#placeholder2">Examples</a><br>
         </details>
     </div>
 
     <div class="main">
         <details>
-            <summary><p id="javascript"><span id="arrow2">▶</span>Javascript</p></summary>
-            this is Javascript.
+            <summary><p id="placeholder1"> <span id="arrow2">▶</span>History of Python</p></summary>
+            this is placeholder1.
         </details>
-        <br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
         <details>
-            <summary><p id="c++"><span id="arrow3">▶</span>C++</p></summary>
-            this is C++.
-        </details>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="c#"><span id="arrow4">▶</span>C#</p></summary>
-            this is C#.
-        </details>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="html"><span id="arrow5">▶</span>Html</p></summary>
-            HTML is a type of coding language that is primarily used for making websites.<br>
-            This website is made 60% by HTML and is the base for most websites.<br>
-            Some examples of HTML are... <br>
-            <h2>Tables</h2><br>
-            <table border="1">
-                <tr><td>A</td><td>B</td></tr>
-                <tr><td>C</td><td>D</td></tr>
-            </table>
-            and the code looks like this.
-            <div class="code-block">
-                <pre><code>
-&lt;table border="1"&gt;<br>
-&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;<br>
-&lt;tr&gt;&lt;td&gt;C&lt;/td&gt;&lt;td&gt;D&lt;/td&gt;&lt;/tr&gt;<br>
-&lt;/table&gt;
-                </code></pre>
-            </div>
-            <h2>Lists</h2><br>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-            <ol>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-            </ol>
-            and this code looks like.
-            <div class="code-block">
-                <pre><code>
-&lt;ul&gt;<br>
-&lt;li&gt;1&lt;/li&gt;<br>
-&lt;li&gt;2&lt;/li&gt;<br>
-&lt;li&gt;3&lt;/li&gt;<br>
-&lt;/ul&gt;<br>
-&lt;ol&gt;<br>
-&lt;li&gt;4&lt;/li&gt;<br>
-&lt;li&gt;5&lt;/li&gt;<br>
-&lt;li&gt;6&lt;/li&gt;<br>
-&lt;/ol&gt;<br>
-                </code></pre>
-            </div>
-          <h2>Images</h2><br>
-<img width="300" src="">
-<img width="300" src="">
-<br>this code looks like.
-<div class="code-block">
-    <pre><code>
-&lt;img width="300" src="https://th.bing.com/th?q=HTML+Icon.png&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-CA&cc=CA&setlang=en&adlt=strict&t=1&mw=247"&gt;
-    </code></pre>
-</div>
-<h2>Videos</h2><br>
-<iframe width="300" src="https://www.youtube.com/embed/FQdaUv95mR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="300" src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br> this code looks like.
-<div class="code-block">
-    <pre><code>
-&lt;iframe width="300" src="https://www.youtube.com/embed/FQdaUv95mR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;iframe width="300" src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-    </code></pre>
-</div>
-<h2>Links</h2><br>
-<a href="https://en.wikipedia.org/wiki/HTML">HTML Wikipedia</a><br><br><br>
-<br> this code looks like.
-<div class="code-block">
-    <pre><code>
-&lt;a href="https://en.wikipedia.org/wiki/HTML"&gt;HTML Wikipedia&lt;/a&gt;
-    </code></pre>
-</div>
-<br><br><br>
-<h5>If you want to learn more about HTML go here <a href="html.html">Html Page</a></h5>
-
-<details>
-    <summary><p id="python"><span id="arrow6">▶</span>Python</p></summary>
-    <div class="container">
-        <div class="chart-block">
-            <h2>Bar Chart</h2>
-            <!-- Placeholder for the dynamic chart -->
-            {{ graph|safe }}
-        </div>
-        <div class="form-block">
-            <h2>Contact Form</h2>
-            <form method="POST">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <input type="submit" value="Submit">
-            </form>
-            {% if name and email %}
-            <p>Name: {{ name }}</p>
-            <p>Email: {{ email }}</p>
-            {% endif %}
-        </div>
-        <div class="chat-block">
-            <h2>Real-time Chat</h2>
-            <ul id="messages"></ul>
-            <form id="form" action="">
-                <input id="message" autocomplete="off"><button>Send</button>
-            </form>
-        </div>
+            <summary> <p id="placeholder2"><span id="arrow3">▶</span>Examples</p></summary>
+                <div class="container">
+                    <div class="chart-block">
+                        <h2>Bar Chart</h2>
+                        {{ graph|safe }}
+                    </div><br><br>
+                <div class="code-block">
+                    <pre><code>
+    &lt;div class="chart-block"&gt;
+    &lt;h2&gt;Bar Chart&lt;/h2&gt;
+    &lcub;&lcub; graph|safe &rcub;&rcub;
+    &lt;/div&gt;
+    
+    
+    
+    def create_graph():
+        data = [go.Bar(
+            x=['Category A', 'Category B', 'Category C'],
+            y=[10, 20, 15]
+        )]
+        layout = go.Layout(
+            title='Sample Bar Chart',
+            height=500  # Set a specific height for the chart
+        )
+        fig = go.Figure(data=data, layout=layout)
+        graph = pyo.plot(fig, output_type='div')
+        return graph
+                    </code></pre>
+                                </div><br><br>
+                    <div class="form-block">
+                        <h2>Contact Form</h2>
+                        <form method="POST">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name"><br>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                        {% if name and email %}
+                        <p>Name: {{ name }}</p>
+                        <p>Email: {{ email }}</p>
+                        {% endif %}
+                    </div><br><br>
+    
+    
+                                <div class="code-block">
+                    <pre><code>
+     &lt;div class="form-block"&gt;
+                        &lt;h2&gt;Contact Form&lt;/h2&gt;
+                        &lt;form method="POST"&gt;
+                            &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+                            &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+                            &lt;input type="submit" value="Submit"&gt;
+                        &lt;/form&gt;
+                        &lcub;% if name and email %&rcub;
+                        &lt;p&gt;Name: &lcub;&lcub; name &rcub;&rcub;&lt;/p&gt;
+                        &lt;p&gt;Email: &lcub;&lcub; email &rcub;&rcub;&lt;/p&gt;
+                        &lcub;% endif %&rcub;
+                    &lt;/div&gt;
+    
+    
+    
+    def create_graph():
+        data = [go.Bar(
+            x=['Category A', 'Category B', 'Category C'],
+            y=[10, 20, 15]
+        )]
+        layout = go.Layout(
+            title='Sample Bar Chart',
+            height=500  # Set a specific height for the chart
+        )
+        fig = go.Figure(data=data, layout=layout)
+        graph = pyo.plot(fig, output_type='div')
+        return graph
+                    </code></pre>
+                                </div><br><br>
+                <div class="chat-block">
+        <h2>Real-time Chat</h2>
+        <ul id="messages"></ul>  
+        <form id="form" action="">
+            <input id="message" autocomplete="off"><button>Send</button>
+        </form>
     </div>
-</details>
+    
+                </div>
+        </details>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
-</div>
-<script>
-    const summaries = document.querySelectorAll('summary');
-    summaries.forEach((summary, index) => {
-        const arrow = summary.querySelector('span');
-        summary.addEventListener('click', function() {
-            if (arrow.textContent === '▶') {
-                arrow.textContent = '▼';
-            } else {
-                arrow.textContent = '▶';
-            }
-        });
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var socket = io();
-        var form = document.getElementById('form');
-        var input = document.getElementById('message');
-        var messages = document.getElementById('messages');
+    </div>
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            socket.send(input.value);
-            input.value = '';
-        });
+    <script>
+        const summaries = document.querySelectorAll('summary');
 
-        socket.on('message', function(msg) {
-            var item = document.createElement('li');
-            item.textContent = msg;
-            messages.appendChild(item);
+        summaries.forEach((summary, index) => {
+            const arrow = summary.querySelector('span');
+
+            summary.addEventListener('click', function() {
+                if (arrow.textContent === '▶') {
+                    arrow.textContent = '▼';
+                } else {
+                    arrow.textContent = '▶';
+                }
+            });
         });
-    });
-</script>
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var socket = io();
+                var form = document.getElementById('form');
+                var input = document.getElementById('message');
+                var messages = document.getElementById('messages');
+    
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    socket.send(input.value);
+                    input.value = '';
+                });
+    
+                socket.on('message', function(msg) {
+                    var item = document.createElement('li');
+                    item.textContent = msg;
+                    messages.appendChild(item);
+                });
+            });
+        </script>
 </body>
 </html>
