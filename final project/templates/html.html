@@ -4,7 +4,7 @@
         .sidebar {
             height: 100%;
             width: 230px;
-            position: fixed; 
+            position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
@@ -53,48 +53,134 @@
             color: #5f5d5d;
             display: block;
         }
-    </style>
+        .code-block {
+            color: #44e23e;
+            background-color: #3b3b3b;
+            border: 2px solid #000000;
+            padding: 5px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .form-block, .chat-block, .chart-block {
+            width: 45%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        .form-block, .chat-block {
+            max-width: 400px;
+        }
+        .chat-block {
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    max-height: 300px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        </style>
 </head>
 <body>
     <div class="sidebar">
         <details>
             <summary> <span id="arrow1">▶</span> Click to navigate</summary>
-            <a href="#placeholder1">placeholder1</a><br>
-            <a href="#placeholder2">placeholder2</a><br>
-            <a href="#placeholder3">placeholder3</a><br>
-            <a href="#placeholder4">placeholder4</a><br>
-            <a href="#placeholder5">placeholder5</a><br>
+            <a href="#placeholder1">History</a><br>
+            <a href="#placeholder2">Examples</a><br>
         </details>
     </div>
 
     <div class="main">
         <details>
-            <summary><p id="placeholder1"> <span id="arrow2">▶</span>placeholder1</p></summary>
+            <summary><p id="placeholder1"> <span id="arrow2">▶</span>History</p></summary>
             this is placeholder1.
         </details>
 <br><br><br><br><br>
 <br><br><br><br><br>
         <details>
-            <summary> <p id="placeholder2"><span id="arrow3">▶</span>placeholder2</p></summary>
-            this is placeholder2.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder3"> <span id="arrow4">▶</span>placeholder3</p></summary>
-            this is placeholder3.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder4"> <span id="arrow5">▶</span>placeholder4</p></summary>
-            this is placeholder4.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder5"> <span id="arrow6">▶</span>placeholder5</p></summary>
-            this is placeholder5.
+            <summary> <p id="placeholder2"><span id="arrow3">▶</span>Examples</p></summary>
+            <h2>Tables</h2><br>
+            <table border="1">
+                <tr><td>A</td><td>B</td></tr>
+                <tr><td>C</td><td>D</td></tr>
+            </table>
+            and the code looks like this.
+            <div class="code-block">
+                <pre><code>
+&lt;table border="1"&gt;<br>
+&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;td&gt;C&lt;/td&gt;&lt;td&gt;D&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;/table&gt;
+                </code></pre>
+            </div>
+            <h2>Lists</h2><br>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <ol>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+            and this code looks like.
+            <div class="code-block">
+                <pre><code>
+&lt;ul&gt;<br>
+&lt;li&gt;1&lt;/li&gt;<br>
+&lt;li&gt;2&lt;/li&gt;<br>
+&lt;li&gt;3&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;ol&gt;<br>
+&lt;li&gt;4&lt;/li&gt;<br>
+&lt;li&gt;5&lt;/li&gt;<br>
+&lt;li&gt;6&lt;/li&gt;<br>
+&lt;/ol&gt;<br>
+                </code></pre>
+            </div>
+            <h2>Images</h2><br>
+            <img width="300" src="">
+            <img width="300" src="">
+            <br>this code looks like.
+            <div class="code-block">
+                <pre><code>
+&lt;img width="300" src="https://th.bing.com/th?q=HTML+Icon.png&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-CA&cc=CA&setlang=en&adlt=strict&t=1&mw=247"&gt;
+                </code></pre>
+            </div>
+            <h2>Videos</h2><br>
+            <iframe width="300" src="https://www.youtube.com/embed/FQdaUv95mR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br> this code looks like.
+            <div class="code-block">
+                <pre><code>
+&lt;iframe width="300" src="https://www.youtube.com/embed/FQdaUv95mR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="300" src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+                </code></pre>
+            </div>
+            <h2>Links</h2><br>
+
+            <a href="https://en.wikipedia.org/wiki/HTML">HTML Wikipedia</a><br><br><br>
+            <br> this code looks like.
+            <div class="code-block">
+                <pre><code>
+&lt;a href="https://en.wikipedia.org/wiki/HTML"&gt;HTML Wikipedia&lt;/a&gt;
+                </code></pre>
+            </div>
         </details>
         <br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
