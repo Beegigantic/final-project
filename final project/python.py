@@ -44,7 +44,7 @@ def cSharp_page():
     return render_template('c#.html')
 
 @app.route('/c++.html')
-def c++_page():
+def cPlusPlus_page():
     return render_template('c++.html')
 
 @app.route('/javascript.html')
