@@ -192,17 +192,17 @@ Python’s design philosophy of simplicity and readability, along with its vast 
     
     
     def create_graph():
-        data = [go.Bar(
-            x=['Category A', 'Category B', 'Category C'],
-            y=[10, 20, 15]
-        )]
-        layout = go.Layout(
-            title='Sample Bar Chart',
-            height=500  # Set a specific height for the chart
-        )
-        fig = go.Figure(data=data, layout=layout)
-        graph = pyo.plot(fig, output_type='div')
-        return graph
+    data = [go.Bar(
+        x=['Category A', 'Category B', 'Category C'],
+        y=[10, 20, 15]
+    )]
+    layout = go.Layout(
+        title='Sample Bar Chart',
+        height=500  # Set a specific height for the chart
+    )
+    fig = go.Figure(data=data, layout=layout)
+    graph = pyo.plot(fig, output_type='div')  # This returns the div for embedding
+    return graph
                     </code></pre>
                                 </div><br><br>
                     <div class="form-block">
