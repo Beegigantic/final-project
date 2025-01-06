@@ -4,7 +4,7 @@
         .sidebar {
             height: 100%;
             width: 230px;
-            position: fixed; 
+            position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
@@ -53,50 +53,165 @@
             color: #5f5d5d;
             display: block;
         }
+        .code-block {
+            color: #44e23e;
+            background-color: #3b3b3b;
+            border: 2px solid #000000;
+            padding: 5px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .form-block, .chat-block, .chart-block {
+            width: 45%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        .form-block, .chat-block {
+            max-width: 400px;
+        }
+        .chat-block {
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    max-height: 300px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <details>
             <summary> <span id="arrow1">▶</span> Click to navigate</summary>
-            <a href="#placeholder1">placeholder1</a><br>
-            <a href="#placeholder2">placeholder2</a><br>
-            <a href="#placeholder3">placeholder3</a><br>
-            <a href="#placeholder4">placeholder4</a><br>
-            <a href="#placeholder5">placeholder5</a><br>
+            <a href="#placeholder1">History</a><br>
+            <a href="#placeholder2">Examples</a><br>
         </details>
     </div>
 
     <div class="main">
         <details>
-            <summary><p id="placeholder1"> <span id="arrow2">▶</span>placeholder1</p></summary>
-            this is placeholder1.
+            <summary><p id="placeholder1"> <span id="arrow2">▶</span>History</p></summary>
+            <h1>1990s: The Birth of JavaScript</h1>
+1995:<br>
+JavaScript was created by Brendan Eich at Netscape Communications, originally under the name Mocha,<br>
+ then LiveScript, and finally settled as JavaScript. It was designed as a lightweight scripting language to<br>
+  enhance the interactivity of web pages. JavaScript was developed to work alongside HTML and CSS to enable dynamic content on web pages.<br>
+Netscape Navigator 2.0 (released in 1995) was the first browser to include JavaScript support.<br>
+JavaScript 1.0 was shipped with this release, allowing for simple client-side interactivity such as form validation and pop-up alerts.<br>
+
+<h1>1996: JavaScript 1.1 and Microsoft's JScript</h1>
+1996:<br>
+JavaScript 1.1 was introduced, adding new features like window and document objects for manipulating web pages.<br>
+Microsoft developed its own implementation of JavaScript called JScript, which was included in Internet Explorer (IE).<br>
+ This led to the creation of different versions of the language between browsers, creating compatibility issues.<br>
+
+<h1>1997: JavaScript Standardization (ECMAScript)</h1>
+1997:<br>
+The European Computer Manufacturers Association (ECMA) standardized JavaScript under the name ECMAScript to ensure<br>
+ consistency across different implementations. The first ECMAScript specification, ECMA-262, was published in 1997.<br>
+ECMAScript 1 was the first official version of the language, consolidating the differences between various implementations of JavaScript.<br>
+
+<h1>1999: ECMAScript 3 and Widespread Adoption</h1>
+1999:<br>
+ECMAScript 3 was released, introducing several key features that remain crucial in JavaScript today, including:<br>
+Regular expressions<br>
+try/catch exception handling<br>
+Better string manipulation methods<br>
+for loops improvements<br>
+This version solidified JavaScript’s place as the primary client-side scripting language for web development.<br>
+
+<h1>2005: AJAX and Web 2.0</h1>
+2005:
+AJAX (Asynchronous JavaScript and XML) emerged as a technology that allowed web pages to load data in the<br>
+ background without refreshing the entire page. This led to the rise of Web 2.0 applications, where dynamic and interactive websites became the norm.<br>
+Technologies like Google Maps and Gmail began using AJAX to create seamless user experiences, revolutionizing how web applications were built.<br>
+
+<h1>2008: The Birth of Google Chrome and V8 Engine</h1>
+2008:<br>
+Google launched the Chrome browser, which included the powerful V8 JavaScript engine. V8 drastically improved<br>
+ JavaScript’s performance, making web applications faster and more capable.<br>
+This sparked further innovation in JavaScript, as browsers began to heavily optimize their JavaScript engines for better performance.<br>
+Node.js, a runtime environment that uses JavaScript for server-side programming, was created by Ryan Dahl in 2009.<br>
+ It allowed developers to use JavaScript for both client-side and server-side applications, greatly expanding its use.<br>
+
+<h1>2010: The Rise of JavaScript Frameworks</h1>
+2010–2012:<br>
+JavaScript frameworks like AngularJS (developed by Google), React (by Facebook), and Vue.js (developed by Evan You)<br>
+ began to take hold. These frameworks simplified the development of complex, dynamic web applications by offering reusable components,<br>
+  two-way data binding, and virtual DOM implementations.<br>
+
+<h1>2015: ECMAScript 6 (ES6) and the Modern JavaScript Renaissance</h1>
+2015:<br>
+ECMAScript 6 (also known as ES6 or ECMAScript 2015) was released, marking a significant update to the language.<br>
+ Some of the major new features included:<br>
+Arrow functions for concise function syntax<br>
+Classes for object-oriented programming<br>
+Modules for better code organization<br>
+Promises for handling asynchronous operations<br>
+Let and const for block-scoped variables<br>
+Template literals for easier string interpolation<br>
+ES6 was one of the most significant updates to JavaScript, modernizing the language and making it more capable for building large-scale applications.<br>
+
+<h1>2016–2018: JavaScript in the Server-Side (Node.js)</h1>
+2016–2018:<br>
+Node.js gained massive popularity for server-side JavaScript programming. As a result, JavaScript became<br>
+ a full-stack language, with developers able to write both client-side and server-side code in the same language.<br>
+  This shift dramatically changed the landscape of web development.<br>
+npm (Node Package Manager) became the largest ecosystem of open-source libraries, further cementing JavaScript’s role in modern development.<br>
+
+<h1>2019: ECMAScript 2019 (ES10) and Continued Evolution</h1>
+2019:<br>
+ECMAScript 2019 (ES10) introduced several important updates, including:<br>
+Array.prototype.flat() and Array.prototype.flatMap() for easier array manipulation<br>
+Object.fromEntries() for converting key-value pairs into an object<br>
+String.prototype.trimStart() and String.prototype.trimEnd() for trimming spaces from strings<br>
+These updates continued to enhance JavaScript’s capabilities, making it easier for developers to work with arrays, strings, and objects.<br>
+
+<h1>2020: ECMAScript 2020 (ES11) and New Features</h1>
+2020:<br>
+ECMAScript 2020 (ES11) added several features that further improved the language:<br>
+Nullish coalescing operator (??) for handling null or undefined values<br>
+Optional chaining (?.) for safe property access<br>
+BigInt for representing large integers<br>
+Promise.allSettled() for handling multiple promises<br>
+These new features enhanced JavaScript’s ability to handle more complex use cases and improved the developer<br>
+ experience when working with asynchronous code and large data types.<br><br><br><br>
+
+
+
+JavaScript continues to evolve rapidly, with continuous improvements to its performance and developer tools.<br>
+ It remains the dominant language for web development, powering nearly every dynamic website and web application.<br>
+  Key trends include:<br>
+The increasing use of JavaScript for serverless architecture and microservices<br>
+Enhanced support for machine learning and AI via JavaScript libraries like TensorFlow.js<br>
+Continued development of JavaScript frameworks (React, Angular, Vue) and static site generators like Next.js<br>
+TypeScript, a statically typed superset of JavaScript, has also seen rapid adoption as a way to add<br>
+ type safety and tooling improvements to JavaScript codebases<br>
+JavaScript remains the most widely used language in the world, and its ecosystem continues to grow,<br>
+ ensuring its dominance in web development, server-side applications, and beyond.<br>
         </details>
 <br><br><br><br><br>
 <br><br><br><br><br>
         <details>
-            <summary> <p id="placeholder2"><span id="arrow3">▶</span>placeholder2</p></summary>
+            <summary> <p id="placeholder2"><span id="arrow3">▶</span>Examples</p></summary>
             this is placeholder2.
         </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder3"> <span id="arrow4">▶</span>placeholder3</p></summary>
-            this is placeholder3.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder4"> <span id="arrow5">▶</span>placeholder4</p></summary>
-            this is placeholder4.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder5"> <span id="arrow6">▶</span>placeholder5</p></summary>
-            this is placeholder5.
-        </details>
-        <br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
