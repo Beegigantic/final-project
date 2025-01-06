@@ -39,13 +39,13 @@ def html_page():
 def python_page():
     return render_template('python.html')
 
-@app.route('/c#.html')
+@app.route('/cSharp.html')
 def cSharp_page():
-    return render_template('c#.html')
+    return render_template('cSharp.html')
 
-@app.route('/c++.html')
+@app.route('/cPlusPlus.html')
 def cPlusPlus_page():
-    return render_template('c++.html')
+    return render_template('cPlusPlus.html')
 
 @app.route('/javascript.html')
 def javascript_page():
