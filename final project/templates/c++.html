@@ -4,7 +4,7 @@
         .sidebar {
             height: 100%;
             width: 230px;
-            position: fixed; 
+            position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
@@ -53,50 +53,160 @@
             color: #5f5d5d;
             display: block;
         }
+        .code-block {
+            color: #44e23e;
+            background-color: #3b3b3b;
+            border: 2px solid #000000;
+            padding: 5px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .form-block, .chat-block, .chart-block {
+            width: 45%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        .form-block, .chat-block {
+            max-width: 400px;
+        }
+        .chat-block {
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    max-height: 300px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <details>
             <summary> <span id="arrow1">▶</span> Click to navigate</summary>
-            <a href="#placeholder1">placeholder1</a><br>
-            <a href="#placeholder2">placeholder2</a><br>
-            <a href="#placeholder3">placeholder3</a><br>
-            <a href="#placeholder4">placeholder4</a><br>
-            <a href="#placeholder5">placeholder5</a><br>
+            <a href="#placeholder1">History</a><br>
+            <a href="#placeholder2">Examples</a><br>
         </details>
     </div>
 
     <div class="main">
         <details>
-            <summary><p id="placeholder1"> <span id="arrow2">▶</span>placeholder1</p></summary>
-            this is placeholder1.
+            <summary><p id="placeholder1"> <span id="arrow2">▶</span>History</p></summary>
+            
+<h1>1970s: The Origins of C++</h1>
+1972:<br>
+C was created by Dennis Ritchie at Bell Labs. It quickly became one of the most influential programming languages due to its<br>
+ efficiency and portability, laying the foundation for the creation of C++.<br>
+1979:<br>
+Bjarne Stroustrup began working on C++ at Bell Labs as an extension of C, aiming to add object-oriented programming (OOP)<br>
+ features without sacrificing performance. He initially called the language “C with Classes” to reflect its object-oriented capabilities.<br>
+
+
+<h1>1983: C++ 1.0 and the First Major Release</h1>
+1983:<br>
+C++ 1.0 was officially released. It introduced the concept of classes, marking the language as object-oriented, and it included:<br>
+Inheritance and polymorphism<br>
+Constructor and destructor functions<br>
+Basic exception handling<br>
+While C++ 1.0 added the object-oriented features that became key components of the language, it was still heavily based on C’s syntax.<br>
+
+<h1>1985: The First Edition of "The C++ Programming Language"</h1>
+1985:<br>
+Stroustrup published the first edition of “The C++ Programming Language”, which became the definitive guide to the language<br>
+ and contributed to the widespread adoption of C++. C++ became popular for system programming, application development, and embedded systems.<br>
+
+
+<h1>1989: C++ 2.0 and Multiple Inheritance</h1>
+1989:<br>
+C++ 2.0 was released, adding support for multiple inheritance, a feature allowing classes to inherit characteristics from more<br>
+ than one base class. This expanded the object-oriented capabilities of C++, giving developers greater flexibility.<br>
+1990: The Standardization of C++ Begins<br>
+1990:<br>
+Work began on the standardization of C++ by the International Organization for Standardization (ISO). This led to the creation<br>
+ of the ISO/IEC JTC1/SC22/WG21 working group, which would go on to define C++ as a standardized language.<br>
+
+ 
+<h1>1998: C++ 98 and the ISO Standard</h1>
+1998:<br>
+C++ 98, the first international standard for C++, was officially published by ISO. It included important features like:<br>
+The Standard Template Library (STL), which introduced containers, algorithms, and iterators<br>
+New type traits and runtime type identification (RTTI)<br>
+C++98 formalized the language, ensuring compatibility across compilers and systems.<br>
+
+<h1>2003: C++ 03 - Minor Updates</h1>
+2003:<br>
+C++ 03 was released as a bug-fix update to C++98. It did not introduce significant new features but addressed various<br>
+ issues related to the C++98 standard, ensuring better compiler compatibility and performance.<br>
+
+<h1>2011: C++11 and a Major Revamp</h1>
+2011:<br>
+C++11 was a major update that introduced several new features, making the language more modern and powerful:<br>
+Auto keyword for automatic type inference<br>
+Lambda functions for anonymous function objects<br>
+nullptr to replace the NULL constant<br>
+Range-based for loops<br>
+Move semantics and rvalue references for better resource management<br>
+Static assertions for compile-time checking<br>
+C++11 modernized the language, making it safer, more efficient, and easier to write.<br>
+
+<h1>2014: C++14 - Refinements and Bug Fixes</h1>
+2014:<br>
+C++14 was released as an incremental update to C++11. It focused on small feature improvements and bug fixes:<br>
+Lambda expressions were enhanced<br>
+Binary literals were introduced<br>
+More compile-time optimizations<br>
+
+<h1>2017: C++17 - Further Modernization</h1>
+2017:<br>
+C++17 continued the trend of modernization, introducing more features and simplifying complex tasks:<br>
+Structured bindings for easier unpacking of tuples and pair-like objects<br>
+If constexpr for better compile-time decisions<br>
+Filesystem library for easier file system access<br>
+std::optional for handling values that may or may not exist<br>
+C++17 further improved the language’s usability and performance, particularly for developers building complex systems.<br>
+
+<h1>2020: C++20 - A Major Evolution</h1>
+2020:<br>
+C++20 was one of the most significant updates to the language in recent years, bringing major new features:<br>
+Concepts, a way to specify template requirements<br>
+Ranges library to simplify working with collections<br>
+Coroutines for easier asynchronous programming<br>
+Modules, a feature aimed at improving compilation times<br>
+Calendar and timezone libraries for better time handling<br>
+C++20 strengthened C++’s position in modern systems programming and application development.<br>
+
+<h1>2023: C++23 - Refining and Expanding</h1>
+2023:<br>
+C++23, the latest version, continued refining C++20’s features and introduced several new improvements:<br>
+Expanded support for constexpr (compile-time computations)<br>
+More powerful template metaprogramming<br>
+Enhanced standard libraries for networking, multithreading, and more<br><br><br><br>
+
+
+
+C++ remains one of the most powerful and widely used programming languages, especially in systems programming, game development (through engines like Unreal), embedded systems, and high-performance applications. It is known for its low-level capabilities, efficiency, and performance, while continuously evolving to support modern development practices like multithreading, parallel computing, and functional programming. C++ is still actively developed and used by a large community, ensuring it remains relevant in the rapidly changing tech landscape.
         </details>
 <br><br><br><br><br>
 <br><br><br><br><br>
         <details>
-            <summary> <p id="placeholder2"><span id="arrow3">▶</span>placeholder2</p></summary>
+            <summary> <p id="placeholder2"><span id="arrow3">▶</span>Examples</p></summary>
             this is placeholder2.
         </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder3"> <span id="arrow4">▶</span>placeholder3</p></summary>
-            this is placeholder3.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder4"> <span id="arrow5">▶</span>placeholder4</p></summary>
-            this is placeholder4.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder5"> <span id="arrow6">▶</span>placeholder5</p></summary>
-            this is placeholder5.
-        </details>
-        <br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
