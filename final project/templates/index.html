@@ -97,60 +97,53 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <details>
-            <summary><span id="arrow1">▶</span> Click to navigate</summary>
-            <a href="#javascript">Javascript</a><br>
-            <a href="#c++">C++</a><br>
-            <a href="#c#">C#</a><br>
-            <a href="#html">Html</a><br>
-            <a href="#python">Python</a><br>
-        </details>
-    </div>
+  <div class="sidebar">
+    <details open>
+        <summary><span id="arrow1">▶</span> Click to navigate</summary>
+        <a href="#javascript">Javascript</a><br>
+        <a href="#c++">C++</a><br>
+        <a href="#c#">C#</a><br>
+        <a href="#html">Html</a><br>
+        <a href="#python">Python</a><br>
+    </details>
+</div>
 
-    <div class="main">
-        <h1>Coding Languages</h1>
-        There are many coding languages made for different tasks. 
-        <details>
-            <summary><p id="javascript"><span id="arrow2">▶</span>Javascript</p></summary>
-            JavaScript is a programming language that enables dynamic content and interactivity on websites.<br>
-            JavaScript works beside HTML and CSS to create fantastical web pages.
-            <br><br><br> <h5>If you want to learn more about Javascript go here <a href="javascript.html">Javascript Page</a></h5>
-        </details>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="c++"><span id="arrow3">▶</span>C++</p></summary>
-            C++ is mainly used for programming systems and complicated games.
-            <br><br><br> <h5>If you want to learn more about C++ go here <a href="cPlusPlus.html">C++ Page</a></h5>
-        </details>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="c#"><span id="arrow4">▶</span>C#</p></summary>
-            C# is a programming language that enables the development of powerful and versatile applications,
-            <br> including desktop, web, and mobile apps.
-            <br><br><br> <h5>If you want to learn more about C# go here <a href="cSharp.html">C# Page</a></h5>
-        </details>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="html"><span id="arrow5">▶</span>Html</p></summary>
-            HTML is a type of coding language that is primarily used for making websites.<br>
-            This website is made 60% by HTML and is the base for most websites.<br>
-            <br><br><br> <h5>If you want to learn more about HTML go here <a href="html.html">Html Page</a></h5>
-        </details>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="python"><span id="arrow6">▶</span>Python</p></summary>
-           Python lets you get live updates and engangment. I used a seperate Python script<br>
-           to write in and "take" from.
-           <br><br><br> <h5>If you want to learn more about Python go here <a href="python.html">Python Page</a></h5>
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br>
-    </div>
+<div class="main">
+    <h1>Coding Languages</h1>
+    <details open>
+        <summary><p id="javascript"><span id="arrow2">▶</span>Javascript</p></summary>
+        JavaScript is a programming language that enables dynamic content and interactivity on websites.<br>
+        JavaScript works beside HTML and CSS to create fantastical web pages.
+        <br><br><br> <h5>If you want to learn more about Javascript go here <a href="javascript.html">Javascript Page</a></h5>
+    </details>
+    <br><br><br><br><br>
+    <details open>
+        <summary><p id="c++"><span id="arrow3">▶</span>C++</p></summary>
+        C++ is mainly used for programming systems and complicated games.
+        <br><br><br> <h5>If you want to learn more about C++ go here <a href="cPlusPlus.html">C++ Page</a></h5>
+    </details>
+    <br><br><br><br><br>
+    <details open>
+        <summary><p id="c#"><span id="arrow4">▶</span>C#</p></summary>
+        C# is a programming language that enables the development of powerful and versatile applications,
+        <br> including desktop, web, and mobile apps.
+        <br><br><br> <h5>If you want to learn more about C# go here <a href="cSharp.html">C# Page</a></h5>
+    </details>
+    <br><br><br><br><br>
+    <details open>
+        <summary><p id="html"><span id="arrow5">▶</span>Html</p></summary>
+        HTML is a type of coding language that is primarily used for making websites.<br>
+        This website is made 60% by HTML and is the base for most websites.<br>
+        <br><br><br> <h5>If you want to learn more about HTML go here <a href="html.html">Html Page</a></h5>
+    </details>
+    <br><br><br><br><br>
+    <details open>
+        <summary><p id="python"><span id="arrow6">▶</span>Python</p></summary>
+       Python lets you get live updates and engagement. I used a separate Python script<br>
+       to write in and "take" from.
+       <br><br><br> <h5>If you want to learn more about Python go here <a href="python.html">Python Page</a></h5>
+    </details>
+</div>
     <script>
         const summaries = document.querySelectorAll('summary');
         summaries.forEach((summary, index) => {
