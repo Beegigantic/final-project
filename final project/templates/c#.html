@@ -4,7 +4,7 @@
         .sidebar {
             height: 100%;
             width: 230px;
-            position: fixed; 
+            position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
@@ -53,50 +53,166 @@
             color: #5f5d5d;
             display: block;
         }
+        .code-block {
+            color: #44e23e;
+            background-color: #3b3b3b;
+            border: 2px solid #000000;
+            padding: 5px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .form-block, .chat-block, .chart-block {
+            width: 45%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+        }
+        .form-block, .chat-block {
+            max-width: 400px;
+        }
+        .chat-block {
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    max-height: 300px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <details>
             <summary> <span id="arrow1">▶</span> Click to navigate</summary>
-            <a href="#placeholder1">placeholder1</a><br>
-            <a href="#placeholder2">placeholder2</a><br>
-            <a href="#placeholder3">placeholder3</a><br>
-            <a href="#placeholder4">placeholder4</a><br>
-            <a href="#placeholder5">placeholder5</a><br>
+            <a href="#placeholder1">History</a><br>
+            <a href="#placeholder2">Examples</a><br>
         </details>
     </div>
 
     <div class="main">
         <details>
-            <summary><p id="placeholder1"> <span id="arrow2">▶</span>placeholder1</p></summary>
-            this is placeholder1.
+            <summary><p id="placeholder1"> <span id="arrow2">▶</span>History</p></summary>
+            <h1>Late 1980s–Early 1990s: The Origins of C#</h1>
+1988:<br>
+Microsoft launched C++/CLI (C++ with Managed Extensions), which laid the groundwork for a new programming language<br>
+ designed to work with the .NET framework.<br>
+1990s:<br>
+Microsoft sought a successor to C++ that would be simpler, more secure, and better suited for rapid software development.<br>
+ This led to the conceptualization of C#.<br>
+
+<h1>2000: C# Development Begins</h1>
+2000:<br>
+C# was developed by Anders Hejlsberg, a prominent Danish software engineer who previously worked on Turbo Pascal and Delphi.<br>
+ C# was created as part of the .NET initiative, a Microsoft platform for building and running applications. It was designed to be<br>
+  simple, modern, and object-oriented, combining the best features of languages like C++, Java, and Visual Basic.<br>
+C# was initially meant to be a component of the .NET Framework, which aimed to simplify the development of Windows applications<br>
+ with a focus on object-oriented design.<br>
+
+<h1>2002: C# 1.0 Released</h1>
+2002:<br>
+The first official version of C# was released along with .NET Framework 1.0. C# 1.0 introduced essential features such as:<br>
+Classes and objects<br>
+Inheritance and polymorphism<br>
+Basic exception handling<br>
+Garbage collection<br>
+At this time, C# was intended primarily for Windows-based applications, but it had a clear design aiming at a wider future<br>
+ in cross-platform development.<br>
+
+<h1>2005: C# 2.0 and LINQ</h1>
+November 2005:<br>
+C# 2.0 was released alongside .NET Framework 2.0. New features included:<br>
+Generics for stronger typing and code reuse<br>
+Anonymous methods for inline code logic<br>
+Nullable types for handling value types with null values<br>
+
+<h1>2007: C# 3.0 and Language-Integrated Query (LINQ)</h1>
+November 2007:<br>
+C# 3.0 was released with significant updates, including:<br>
+Language-Integrated Query (LINQ), which allowed developers to write SQL-like queries directly in C# for better data manipulation<br>
+Anonymous types<br>
+Extension methods<br>
+Automatic properties<br>
+Implicitly typed variables (var)<br>
+LINQ revolutionized how data was queried, making C# a more powerful language for working with databases and collections.<br>
+
+<h1>2010: C# 4.0 and Dynamic Language Runtime</h1>
+April 2010:<br>
+C# 4.0 was released with key improvements, including:<br>
+Dynamic typing via the dynamic keyword, allowing C# to interact with dynamic languages such as Python and JavaScript<br>
+Named and optional arguments for method calls<br>
+Interop improvements for COM (Component Object Model) and inter-language communication<br>
+
+<h1>2012: C# 5.0 and Asynchronous Programming</h1>
+August 2012:<br>
+C# 5.0 was released with the introduction of asynchronous programming features:<br>
+async and await keywords, making it easier to write asynchronous code<br>
+Improvements in error handling and debugging<br>
+C# 5.0’s asynchronous programming model laid the foundation for modern, high-performance applications,<br>
+ especially those requiring responsiveness and scalability.<br>
+
+<h1>2015: C# 6.0 and Simplification</h1>
+July 2015:<br>
+C# 6.0 was released alongside .NET Framework 4.6. New features focused on simplifying code and improving readability:<br>
+Expression-bodied members for more concise syntax<br>
+Interpolated strings for easier string formatting<br>
+Null-conditional operators (?.) to avoid null reference exceptions<br>
+C# 6.0 made the language even more elegant and developer-friendly while maintaining backward compatibility.<br>
+
+<h1>2017: C# 7.0 and Enhanced Performance</h1>
+March 2017:<br>
+C# 7.0 was released with a focus on performance improvements and new features:<br>
+Tuples for grouping multiple values in a single object<br>
+Local functions for defining methods inside other methods<br>
+Pattern matching improvements<br>
+
+<h1>2020: C# 9.0 and Record Types</h1>
+November 2020:<br>
+C# 9.0 introduced significant updates:<br>
+Record types for immutable data models<br>
+Init-only properties<br>
+Top-level statements for simplifying program entry points<br>
+Improved pattern matching<br>
+Record types were a major addition, simplifying the creation of immutable objects with value-based equality.<br>
+
+<h1>2021: C# 10.0 and .NET 6</h1>
+November 2021:<br>
+C# 10.0 was released with the launch of .NET 6, focusing on improving the developer experience:<br>
+Global using directives<br>
+File-scoped namespaces<br>
+Improved lambda expressions<br>
+Enhancements in pattern matching<br>
+C# 10 and .NET 6 continued the trend of improved productivity and performance, with emphasis on reducing<br>
+ boilerplate code and improving language features.<br><br><br><br>
+
+
+C# continues to be one of the most popular and versatile programming languages,<br>
+ used in web development (via ASP.NET), mobile applications (via Xamarin), and game development (via Unity).<br>
+  It remains a central part of the .NET ecosystem and continues evolving with each new version,<br>
+   improving developer productivity and supporting modern technologies like cloud computing, AI, and machine learning.<br>
+As of today, C# is recognized for its balance of performance, safety, and ease of use, and it is widely adopted across<br>
+ industries for building enterprise-grade applications.<br>
         </details>
 <br><br><br><br><br>
 <br><br><br><br><br>
         <details>
-            <summary> <p id="placeholder2"><span id="arrow3">▶</span>placeholder2</p></summary>
+            <summary> <p id="placeholder2"><span id="arrow3">▶</span>Examples</p></summary>
             this is placeholder2.
         </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder3"> <span id="arrow4">▶</span>placeholder3</p></summary>
-            this is placeholder3.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder4"> <span id="arrow5">▶</span>placeholder4</p></summary>
-            this is placeholder4.
-        </details>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <details>
-            <summary><p id="placeholder5"> <span id="arrow6">▶</span>placeholder5</p></summary>
-            this is placeholder5.
-        </details>
-        <br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
