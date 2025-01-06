@@ -8,35 +8,29 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
 socketio = SocketIO(app)
 
-
-@app.route('/')
-def index():
-    # Create the graph (call the create_graph function)
-    graph = create_graph()
-    return render_template('python.html', graph=graph)
-
 def create_graph():
-    # Create the data for the bar chart
     data = [go.Bar(
         x=['Category A', 'Category B', 'Category C'],
         y=[10, 20, 15]
     )]
-    
-    # Set the layout for the chart
     layout = go.Layout(
         title='Sample Bar Chart',
         height=500  # Set a specific height for the chart
     )
-    
-    # Create the figure
     fig = go.Figure(data=data, layout=layout)
-    
-    # Generate the div HTML for embedding the chart
     graph = pyo.plot(fig, output_type='div')
     return graph
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    graph = create_graph()
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        return render_template('index.html', graph=graph, name=name, email=email)
+    
+    return render_template('index.html', graph=graph)
+
 @app.route('/html.html')
 def html_page():
     return render_template('html.html')
