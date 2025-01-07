@@ -37,12 +37,30 @@
             margin-left: 230px;
             padding: 0px 10px;
         }
+        .main summary:hover {
+            color: #000000;
+        }
         .main h1 {
             padding: 6px 8px 6px 16px;
             text-decoration: none;
             font-size: 25px;
             color: #252525;
             display: block;
+        }
+        .main summary {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #5f5d5d;
+            display: block;
+        }
+        .code-block {
+            color: #44e23e;
+            background-color: #3b3b3b;
+            border: 2px solid #000000;
+            padding: 5px;
+            border-radius: 5px;
+            overflow-x: auto;
         }
         .container {
             display: flex;
@@ -61,17 +79,20 @@
             max-width: 400px;
         }
         .chat-block {
-            max-height: 300px;
-            height: 400px;
-            overflow-y: auto;
-        }
-        .code-block {
-            color: #44e23e;
-            background-color: #3b3b3b;
-            border: 2px solid #000000;
-            padding: 5px;
-            border-radius: 5px;
-            overflow-x: auto;
+    width: 45%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    max-height: 300px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
     </style>
 </head>
@@ -86,76 +107,157 @@
 
     <div class="main">
         <details>
-            <summary><p id="placeholder1"> <span id="arrow2">▶</span> History of Python</p></summary>
+            <summary><p id="placeholder1"> <span id="arrow2">▶</span>History of Python</p></summary>
             <h1>1990: Birth of Python</h1>
             December 1989:<br>
             Guido van Rossum, a Dutch programmer, started implementing Python as a hobby project during his holiday break.<br>
             1990:<br>
-            The language was officially born. Its name, "Python," was inspired by Monty Python’s Flying Circus.<br><br><br>
+            The language was officially born. Its name, "Python," was inspired by Monty Python’s Flying<br> Circus, as Guido wanted a name that was short, unique, and a little weird.<br><br><br>
 
-            <h1>1991: Python 0.9.0</h1>
-            February 1991:<br>
-            Guido released Python 0.9.0 to the public.<br><br><br>
+          
+    <h1>  1991: Python 0.9.0</h1>
+    February 1991:<br>
+    Guido released Python 0.9.0 to the public. This initial version already had features that became the backbone of Python, including:<br>
+    Functions   <br>
+Exception handling<br>
+ Core data types like str, list, dict, and tuple<br>
+ Modules (inspired by Modula-3)<br><br><br>
 
-            <h1>1994: Python 1.0</h1>
-            January 1994:<br>
-            Python 1.0 was released.<br><br><br>
+ <h1>1994: Python 1.0</h1>
+January 1994:<br>
+Python 1.0 was released. It introduced features like:<br>
+Lambda functions<br>
+Map, filter, reduce functions<br>
+Error handling with exceptions<br>
+This marked Python's first major milestone and the establishment of a dedicated user base.<br><br><br>
 
-            <h1>2000: Python 2.0</h1>
-            October 2000:<br>
-            Python 2.0 was released.<br><br><br>
+<h1>2000: Python 2.0</h1>
+October 2000:<br>
+Python 2.0 was released. Significant features included:<br>
+List comprehensions<br>
+Garbage collection based on reference counting and cycle detection<br>
+Unicode support<br>
+However, Python 2.0 introduced challenges, including compatibility issues, which would lead to the need for Python 3.<br>
 
-            <h1>2008: Python 3.0</h1>
-            December 2008:<br>
-            Python 3.0 was released.<br><br><br>
+2001:<br>
+The Python Software Foundation (PSF) was formed to manage the language’s development and intellectual property.<br><br><br>
 
-            <h1>2010s: Python's Rise in Popularity</h1>
-            2010:<br>
-            Django, a popular web framework built on Python, gained traction.<br><br><br>
+<h1>2008: Python 3.0</h1>
+December 2008:<br>
+Python 3.0 was released as a complete overhaul of the language. Key changes included:<br>
+Removal of backward compatibility to fix design flaws<br>
+Introduction of a clear distinction between str (Unicode) and bytes<br>
+Print statement replaced with the print() function<br>
+Enhanced syntax for exceptions<br>
+Python 3 adoption was slow due to its lack of backward compatibility with Python 2.x.<br><br><br>
 
-            <h1>2020: End of Python 2</h1>
-            January 1, 2020:<br>
-            Official support for Python 2 ended.<br><br><br>
+<h1>2010s: Python's Rise in Popularity</h1>
+2010:<br>
+Django, a popular web framework built on Python, gained traction, boosting Python's use in web development.<br>
+2012:<br>
+Python 2.7 became the final release of Python 2, with long-term support promised until 2020.<br>
+2015:<br>
+Machine learning and data science saw a surge in Python usage, thanks to libraries like NumPy, pandas, and scikit-learn. Jupyter Notebook became a favorite tool among data scientists.<br><br><br>
 
-            <h1>2021 and Beyond: Modern Python</h1>
-            2021:<br>
-            Python became one of the most popular programming languages globally.<br><br><br>
+<h1>2020: End of Python 2</h1>
+January 1, 2020:<br>
+Official support for Python 2 ended, marking a significant shift as users transitioned to Python 3.<br><br><br>
+
+<h1>2021 and Beyond: Modern Python</h1>
+2021:<br>
+Python became one of the most popular programming languages globally, used extensively in machine learning, web development, automation, and education.<br>
+2023:<br>
+Python 3.12 was released, introducing performance improvements and enhanced error messages.<br><br><br>
+
+
+Python’s design philosophy of simplicity and readability, along with its vast ecosystem of libraries<br>
+ and frameworks, continues to make it one of the most versatile and beloved programming<br>
+  languages today.
         </details>
-
+<br><br><br><br><br>
+<br><br><br><br><br>
         <details>
-            <summary><p id="placeholder2"><span id="arrow3">▶</span> Examples</p></summary>
-            <div class="container">
-                <div class="chart-block">
-                    <h1>Graph</h1>
-                    <div>
-                        {{ graph|safe }}
-                    </div>                        
-                </div>
-
+            <summary> <p id="placeholder2"><span id="arrow3">▶</span>Examples</p></summary>
+                <div class="container">
+                    <div class="chart-block">
+                        <h1>Graph</h1>
+                        <div>
+                            {{ graph|safe }}
+                        </div>                        
+                    </div>
+                    <br><br>
                 <div class="code-block">
                     <pre><code>
     &lt;div class="chart-block"&gt;
     &lt;h2&gt;Bar Chart&lt;/h2&gt;
     &lcub;&lcub; graph|safe &rcub;&rcub;
     &lt;/div&gt;
+    
+    
+    
+    def create_graph():
+        data = [go.Bar(
+            x=['Category A', 'Category B', 'Category C'],
+            y=[10, 20, 15]
+        )]
+        layout = go.Layout(
+            title='Sample Bar Chart',
+            height=500  # Set a specific height for the chart
+        )
+        fig = go.Figure(data=data, layout=layout)
+        graph = pyo.plot(fig, output_type='div')
+        return graph
                     </code></pre>
-                </div>
-
-                <div class="form-block">
-                    <h2>Contact Form</h2>
-                    <form method="POST">
-                        <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name"><br>
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email"><br>
-                        <input type="submit" value="Submit">
-                    </form>
-                    {% if name and email %}
-                    <p>Name: {{ name }}</p>
-                    <p>Email: {{ email }}</p>
-                    {% endif %}
-                </div>
-
+                                </div><br><br>
+                    <div class="form-block">
+                        <h2>Contact Form</h2>
+                        <form method="POST">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name"><br>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                        {% if name and email %}
+                        <p>Name: {{ name }}</p>
+                        <p>Email: {{ email }}</p>
+                        {% endif %}
+                    </div><br><br>
+    
+    
+                                <div class="code-block">
+                    <pre><code>
+     &lt;div class="form-block"&gt;
+                        &lt;h2&gt;Contact Form&lt;/h2&gt;
+                        &lt;form method="POST"&gt;
+                            &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+                            &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+                            &lt;input type="submit" value="Submit"&gt;
+                        &lt;/form&gt;
+                        &lcub;% if name and email %&rcub;
+                        &lt;p&gt;Name: &lcub;&lcub; name &rcub;&rcub;&lt;/p&gt;
+                        &lt;p&gt;Email: &lcub;&lcub; email &rcub;&rcub;&lt;/p&gt;
+                        &lcub;% endif %&rcub;
+                    &lt;/div&gt;
+    
+    
+    
+    def create_graph():
+        data = [go.Bar(
+            x=['Category A', 'Category B', 'Category C'],
+            y=[10, 20, 15]
+        )]
+        layout = go.Layout(
+            title='Sample Bar Chart',
+            height=500  # Set a specific height for the chart
+        )
+        fig = go.Figure(data=data, layout=layout)
+        graph = pyo.plot(fig, output_type='div')
+        return graph
+                    </code></pre>
+                                </div><br><br>
                 <div class="chat-block">
                     <h1>Live Chat</h1>
 
@@ -177,15 +279,32 @@
                             </form>
                         </div>
                     {% endif %}
+                
+                    <div>
+                        {{ graph|safe }}
+                    </div>
+                
+    </div>
+    
                 </div>
-            </div>
         </details>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
     </div>
 
     <script>
         const summaries = document.querySelectorAll('summary');
+
         summaries.forEach((summary, index) => {
             const arrow = summary.querySelector('span');
+
             summary.addEventListener('click', function() {
                 if (arrow.textContent === '▶') {
                     arrow.textContent = '▼';
@@ -194,10 +313,11 @@
                 }
             });
         });
-
-        // Socket.io for real-time chat
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js"></script>
+        <script>
         var socket = io.connect();
-        var username = "{{ name }}";
+        var username = "{{ name }}";  // Set username from Flask variable
 
         // Handle message sending from user
         document.getElementById("chat-form").addEventListener("submit", function(event) {
@@ -216,6 +336,6 @@
             newMessage.textContent = msg;
             chatMessagesDiv.appendChild(newMessage);
         });
-    </script>
+        </script>
 </body>
 </html>
