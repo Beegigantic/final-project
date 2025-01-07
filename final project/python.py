@@ -25,10 +25,10 @@ def create_graph():
 def index():
     graph = create_graph()
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        return render_template('index.html', graph=graph, name=name, email=email)
+        name = request.form['username']  # Capture username from the form
+        return render_template('index.html', graph=graph, name=name)
     
+    # If no username, just render the page with the graph
     return render_template('index.html', graph=graph)
 
 @app.route('/html.html')
@@ -58,7 +58,7 @@ def handle_connect():
     # Send existing messages to the newly connected client
     for msg in messages:
         send(msg)
-
+        
 @socketio.on('message')
 def handle_message(msg):
     print(f"Message: {msg}")
@@ -69,6 +69,7 @@ def handle_message(msg):
         messages.pop(0)
     # Broadcast the message to all clients
     send(msg, broadcast=True)
+
     
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Ensure the PORT environment variable is used
