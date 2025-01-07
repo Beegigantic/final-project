@@ -98,8 +98,7 @@
 </head>
 <body>
     <div class="sidebar">
-                <a href="https://final-project-t0jo.onrender.com">Back to Index</a>
-        <details open>
+        <details>
             <summary> <span id="arrow1">▶</span> Click to navigate</summary>
             <a href="#placeholder1">History of Python</a><br>
             <a href="#placeholder2">Examples</a><br>
@@ -107,7 +106,7 @@
     </div>
 
     <div class="main">
-        <details open>
+        <details>
             <summary><p id="placeholder1"> <span id="arrow2">▶</span>History of Python</p></summary>
             <h1>1990: Birth of Python</h1>
             December 1989:<br>
@@ -177,13 +176,16 @@ Python’s design philosophy of simplicity and readability, along with its vast 
         </details>
 <br><br><br><br><br>
 <br><br><br><br><br>
-        <details open>
+        <details>
             <summary> <p id="placeholder2"><span id="arrow3">▶</span>Examples</p></summary>
                 <div class="container">
                     <div class="chart-block">
-                        <h2>Bar Chart</h2>
-                        {{ graph|safe }}
-                    </div><br><br>
+                        <h1>Graph</h1>
+                        <div>
+                            {{ graph|safe }}
+                        </div>                        
+                    </div>
+                    <br><br>
                 <div class="code-block">
                     <pre><code>
     &lt;div class="chart-block"&gt;
@@ -194,17 +196,17 @@ Python’s design philosophy of simplicity and readability, along with its vast 
     
     
     def create_graph():
-    data = [go.Bar(
-        x=['Category A', 'Category B', 'Category C'],
-        y=[10, 20, 15]
-    )]
-    layout = go.Layout(
-        title='Sample Bar Chart',
-        height=500  # Set a specific height for the chart
-    )
-    fig = go.Figure(data=data, layout=layout)
-    graph = pyo.plot(fig, output_type='div')  # This returns the div for embedding
-    return graph
+        data = [go.Bar(
+            x=['Category A', 'Category B', 'Category C'],
+            y=[10, 20, 15]
+        )]
+        layout = go.Layout(
+            title='Sample Bar Chart',
+            height=500  # Set a specific height for the chart
+        )
+        fig = go.Figure(data=data, layout=layout)
+        graph = pyo.plot(fig, output_type='div')
+        return graph
                     </code></pre>
                                 </div><br><br>
                     <div class="form-block">
