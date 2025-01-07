@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from flask_socketio import SocketIO, send
 import plotly.graph_objs as go
 import plotly.offline as pyo
@@ -7,9 +7,6 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
 socketio = SocketIO(app)
-
-# Store messages and usernames globally
-messages = []
 
 def create_graph():
     data = [go.Bar(
@@ -53,14 +50,9 @@ def cPlusPlus_page():
 @app.route('/javascript.html')
 def javascript_page():
     return render_template('javascript.html')
+messages = []
 
-# Route to set username for chat
-@app.route('/set_username', methods=['POST'])
-def set_username():
-    username = request.form['username']
-    return render_template('index.html', username=username)
 
-# SocketIO events for real-time chat
 @socketio.on('connect')
 def handle_connect():
     # Send existing messages to the newly connected client
